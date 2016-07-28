@@ -752,10 +752,8 @@ tfw_http_adjust_resp(TfwHttpResp *resp, TfwHttpReq *req)
 #define S_WARN_110_N "Warning:"
 #define S_WARN_110_V "110 - Response is stale"
 
-		r = tfw_http_msg_hdr_xfrm(hm, S_WARN_110_N, SLEN(
-					  S_WARN_110_N), S_WARN_110_V, 
-				          SLEN(S_WARN_110_V), 
-					  TFW_HTTP_HDR_RAW, 0);
+		r = tfw_http_msg_hdr_xfrm(hm, S_WARN_110_N,
+ SLEN(S_WARN_110_N), S_WARN_110_V, SLEN(S_WARN_110_V), TFW_HTTP_HDR_RAW, 0);
 		if (r)
 			return r;
 #undef S_WARN_110_N
