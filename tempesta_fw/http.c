@@ -754,8 +754,8 @@ tfw_http_adjust_resp(TfwHttpResp *resp, TfwHttpReq *req)
 
 		r = tfw_http_msg_hdr_xfrm(hm, S_WARN_110_N,
  					  SLEN(S_WARN_110_N), S_WARN_110_V, 
-					       SLEN(S_WARN_110_V), 
-					       TFW_HTTP_HDR_RAW, 0);
+					  SLEN(S_WARN_110_V), 
+					  TFW_HTTP_HDR_RAW, 0);
 		if (r)
 			return r;
 #undef S_WARN_110_N
